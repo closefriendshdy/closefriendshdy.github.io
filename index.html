@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Close Friends - Official Menu & Interactive Experience</title>
+    <title>Close Friends - Official Portal</title>
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -115,36 +115,13 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .glass-button {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-        }
-
         /* Glowing text effects */
         .neon-text-pink {
             text-shadow: 0 0 10px rgba(255,0,122,0.6), 0 0 20px rgba(255,0,122,0.3);
         }
-
-        .neon-text-cyan {
-            text-shadow: 0 0 10px rgba(0,240,255,0.6), 0 0 20px rgba(0,240,255,0.3);
-        }
-
-        /* Custom Scrollbar for Menu Modal */
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.05);
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: rgba(255, 0, 122, 0.5);
-            border-radius: 4px;
-        }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between items-center px-4 py-6 relative overflow-x-hidden selection:bg-brand-pink selection:text-white">
+<body class="min-h-screen flex flex-col justify-between items-center px-4 py-8 relative overflow-x-hidden selection:bg-brand-pink selection:text-white">
 
     <!-- Ambient Glow Background -->
     <div class="ambient-bg">
@@ -153,24 +130,23 @@
         <div class="ambient-orb-3"></div>
     </div>
 
-    <!-- Main Container -->
-    <div class="w-full max-w-md mx-auto flex flex-col items-center z-10 space-y-6">
+    <div class="w-full max-w-md mx-auto flex flex-col items-center z-10 space-y-8 my-auto">
 
         <!-- Header / Logo Area -->
-        <header class="text-center pt-2 pb-2 w-full flex flex-col items-center">
+        <header class="text-center w-full flex flex-col items-center">
             <!-- Table / Customer Info Badge -->
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-card border border-brand-pink/30 mb-4 animate-float">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-card border border-brand-pink/30 mb-5 animate-float">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
                 <span class="text-xs font-light text-gray-300">ยินดีต้อนรับ • <span class="font-medium text-white">โต๊ะ 08</span></span>
             </div>
 
             <!-- Brand Logo Frame -->
-            <div class="relative mb-3 group">
+            <div class="relative mb-4 group">
                 <div class="absolute -inset-1 bg-gradient-to-r from-brand-pink via-brand-purple to-brand-cyan rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse-glow"></div>
-                <div class="relative w-24 h-24 rounded-full glass-card flex items-center justify-center p-1 border-2 border-white/20">
-                    <!-- Logo Icon / Illustration -->
+                <div class="relative w-28 h-28 rounded-full glass-card flex items-center justify-center p-1 border-2 border-white/20">
+                    <!-- Logo Icon -->
                     <div class="w-full h-full rounded-full bg-gradient-to-tr from-brand-dark via-purple-950 to-brand-card flex flex-col items-center justify-center text-white overflow-hidden">
-                        <i class="fa-solid font-bold text-3xl fa-glass-cheers text-transparent bg-clip-text bg-gradient-to-r from-brand-pink to-brand-cyan"></i>
+                        <i class="fa-solid font-bold text-4xl fa-glass-cheers text-transparent bg-clip-text bg-gradient-to-r from-brand-pink to-brand-cyan"></i>
                         <span class="text-[10px] tracking-widest font-kanit font-semibold text-brand-cyan mt-1">BAR & BISTRO</span>
                     </div>
                 </div>
@@ -180,22 +156,21 @@
             <h1 class="text-3xl font-extrabold tracking-wider font-kanit text-white neon-text-pink">
                 CLOSE FRIENDS
             </h1>
-            <p class="text-xs text-gray-400 font-light mt-1 tracking-widest uppercase">
+            <p class="text-xs text-gray-400 font-light mt-1.5 tracking-widest uppercase">
                 Eat • Drink • Share Memories
             </p>
         </header>
 
-        <!-- Primary Action Navigation Buttons -->
-        <main class="w-full space-y-4 pt-2">
+        <main class="w-full space-y-5">
 
-            <!-- Button 1: Menu Link / Modal trigger -->
-            <button onclick="openMenuModal()" class="w-full group relative overflow-hidden rounded-2xl glass-card border border-brand-pink/40 p-5 transition-all duration-300 active:scale-95 hover:border-brand-pink focus:outline-none shadow-lg shadow-brand-pink/10">
+            <!-- Link 1: Food & Beverage Menu External Link -->
+            <a href="https://example.com/menu" target="_blank" rel="noopener noreferrer" class="block w-full group relative overflow-hidden rounded-2xl glass-card border border-brand-pink/40 p-5 transition-all duration-300 active:scale-95 hover:border-brand-pink focus:outline-none shadow-lg shadow-brand-pink/10">
                 <div class="absolute inset-0 bg-gradient-to-r from-brand-pink/20 via-transparent to-transparent opacity-60 group-hover:opacity-100 transition-opacity"></div>
                 
                 <div class="relative flex items-center justify-between z-10">
                     <div class="flex items-center space-x-4">
                         <!-- Icon Circle -->
-                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-brand-pink to-purple-600 flex items-center justify-center shadow-lg shadow-brand-pink/30 group-hover:scale-105 transition-transform">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-brand-pink to-purple-600 flex items-center justify-center shadow-lg shadow-brand-pink/30 group-hover:scale-105 transition-transform shrink-0">
                             <i class="fa-solid fa-utensils text-2xl text-white"></i>
                         </div>
                         <!-- Text Content -->
@@ -204,25 +179,25 @@
                                 เมนูอาหาร & เครื่องดื่ม
                             </span>
                             <span class="block text-xs text-gray-400 font-light mt-0.5">
-                                สั่งอาหาร เครื่องดื่ม และโปรโมชั่นเด็ด
+                                คลิกเพื่อเปิดดูเมนูรายการอาหาร
                             </span>
                         </div>
                     </div>
                     <!-- Arrow Icon -->
-                    <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-300 group-hover:text-white group-hover:bg-brand-pink/30 transition-all">
-                        <i class="fa-solid fa-chevron-right text-sm"></i>
+                    <div class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-gray-300 group-hover:text-white group-hover:bg-brand-pink/30 transition-all shrink-0 ml-2">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
                     </div>
                 </div>
-            </button>
+            </a>
 
-            <!-- Button 2: Upload Photo to Screen & Music Request -->
-            <button onclick="openUploadModal()" class="w-full group relative overflow-hidden rounded-2xl glass-card border border-brand-cyan/40 p-5 transition-all duration-300 active:scale-95 hover:border-brand-cyan focus:outline-none shadow-lg shadow-brand-cyan/10">
+            <!-- Link 2: Photo Screen Upload External Link -->
+            <a href="https://example.com/upload-photo" target="_blank" rel="noopener noreferrer" class="block w-full group relative overflow-hidden rounded-2xl glass-card border border-brand-cyan/40 p-5 transition-all duration-300 active:scale-95 hover:border-brand-cyan focus:outline-none shadow-lg shadow-brand-cyan/10">
                 <div class="absolute inset-0 bg-gradient-to-r from-brand-cyan/20 via-transparent to-transparent opacity-60 group-hover:opacity-100 transition-opacity"></div>
                 
                 <div class="relative flex items-center justify-between z-10">
                     <div class="flex items-center space-x-4">
                         <!-- Icon Circle -->
-                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-brand-cyan via-teal-500 to-emerald-500 flex items-center justify-center shadow-lg shadow-brand-cyan/30 group-hover:scale-105 transition-transform">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-brand-cyan via-teal-500 to-emerald-500 flex items-center justify-center shadow-lg shadow-brand-cyan/30 group-hover:scale-105 transition-transform shrink-0">
                             <i class="fa-solid fa-camera-retro text-2xl text-slate-900"></i>
                         </div>
                         <!-- Text Content -->
@@ -237,388 +212,46 @@
                                 </span>
                             </div>
                             <span class="block text-xs text-gray-400 font-light mt-0.5">
-                                แชร์รูปภาพลงจอร้าน & ขอเพลงโปรด
+                                แชร์รูปภาพของคุณขึ้นจอใหญ่ในร้าน
                             </span>
                         </div>
                     </div>
                     <!-- Arrow Icon -->
-                    <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-300 group-hover:text-white group-hover:bg-brand-cyan/30 transition-all">
-                        <i class="fa-solid fa-chevron-right text-sm"></i>
+                    <div class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-gray-300 group-hover:text-white group-hover:bg-brand-cyan/30 transition-all shrink-0 ml-2">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
                     </div>
                 </div>
-            </button>
-
-            <!-- Quick Info Bar (Wi-Fi & Events) -->
-            <div class="grid grid-cols-2 gap-3 pt-2">
-                <div onclick="copyWifi()" class="glass-button p-3 rounded-xl flex items-center space-x-3 cursor-pointer hover:bg-white/10 active:scale-95 transition-all">
-                    <div class="w-9 h-9 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-base">
-                        <i class="fa-solid fa-wifi"></i>
-                    </div>
-                    <div class="text-left overflow-hidden">
-                        <p class="text-[10px] text-gray-400">Wi-Fi ฟรี</p>
-                        <p class="text-xs font-semibold text-white truncate" id="wifi-text">CloseFriends_5G</p>
-                    </div>
-                </div>
-
-                <div onclick="openNotificationToast('ดนตรีสดเริ่มเวลา 20:00 น. คืนนี้พบกับวง Acoustic Pop')" class="glass-button p-3 rounded-xl flex items-center space-x-3 cursor-pointer hover:bg-white/10 active:scale-95 transition-all">
-                    <div class="w-9 h-9 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center text-base">
-                        <i class="fa-solid fa-music"></i>
-                    </div>
-                    <div class="text-left overflow-hidden">
-                        <p class="text-[10px] text-gray-400">ตารางดนตรีสด</p>
-                        <p class="text-xs font-semibold text-white truncate">20:00 น. เป็นต้นไป</p>
-                    </div>
-                </div>
-            </div>
+            </a>
 
         </main>
 
         <!-- Footer / Social Media Links -->
-        <footer class="w-full pt-4 pb-2 text-center space-y-4">
+        <footer class="w-full pt-6 pb-2 text-center space-y-4">
+            <p class="text-xs text-gray-400 font-light">ติดตามข่าวสาร & โปรโมชั่น</p>
+            
             <div class="flex items-center justify-center space-x-6">
-                <!-- Line -->
-                <a href="#" onclick="openNotificationToast('กำลังเปิด LINE Official @closefriends')" class="w-10 h-10 rounded-full glass-card flex items-center justify-center text-emerald-400 hover:bg-emerald-500 hover:text-white transition-all transform hover:scale-110 active:scale-95">
-                    <i class="fa-brands fa-line text-xl"></i>
+                <!-- Line Official Link -->
+                <a href="https://line.me/R/ti/p/@closefriends" target="_blank" rel="noopener noreferrer" aria-label="LINE Official Account" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-emerald-400 hover:bg-emerald-500 hover:text-white transition-all transform hover:scale-110 active:scale-95 shadow-md">
+                    <i class="fa-brands fa-line text-2xl"></i>
                 </a>
-                <!-- Facebook -->
-                <a href="#" onclick="openNotificationToast('กำลังไปที่ Facebook: Close Friends Bar')" class="w-10 h-10 rounded-full glass-card flex items-center justify-center text-blue-400 hover:bg-blue-600 hover:text-white transition-all transform hover:scale-110 active:scale-95">
-                    <i class="fa-brands fa-facebook-f text-lg"></i>
+                
+                <!-- Facebook Page Link -->
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook Page" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-blue-400 hover:bg-blue-600 hover:text-white transition-all transform hover:scale-110 active:scale-95 shadow-md">
+                    <i class="fa-brands fa-facebook-f text-xl"></i>
                 </a>
-                <!-- Instagram -->
-                <a href="#" onclick="openNotificationToast('กำลังไปที่ IG: @closefriends.bar')" class="w-10 h-10 rounded-full glass-card flex items-center justify-center text-pink-400 hover:bg-gradient-to-tr hover:from-amber-500 hover:via-pink-500 hover:to-purple-600 hover:text-white transition-all transform hover:scale-110 active:scale-95">
-                    <i class="fa-brands fa-instagram text-xl"></i>
+                
+                <!-- Instagram Link -->
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-pink-400 hover:bg-gradient-to-tr hover:from-amber-500 hover:via-pink-500 hover:to-purple-600 hover:text-white transition-all transform hover:scale-110 active:scale-95 shadow-md">
+                    <i class="fa-brands fa-instagram text-2xl"></i>
                 </a>
-                <!-- Call Staff -->
-                <button onclick="openNotificationToast('เรียกพนักงานเรียบร้อยแล้ว กรุณารอสักครู่')" class="w-10 h-10 rounded-full glass-card flex items-center justify-center text-amber-400 hover:bg-amber-500 hover:text-slate-900 transition-all transform hover:scale-110 active:scale-95">
-                    <i class="fa-solid fa-bell text-lg"></i>
-                </button>
             </div>
 
-            <p class="text-[11px] text-gray-500 font-light">
+            <p class="text-[11px] text-gray-500 font-light pt-2">
                 © 2026 Close Friends Bar & Bistro. All rights reserved.
             </p>
         </footer>
 
     </div>
 
-    <!-- MODAL 1: Food & Beverage Menu Modal -->
-    <div id="menuModal" class="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 p-0 sm:p-4">
-        <div class="w-full max-w-lg bg-brand-dark/95 border border-white/10 rounded-t-3xl sm:rounded-3xl h-[88vh] flex flex-col overflow-hidden shadow-2xl transform translate-y-full transition-transform duration-300" id="menuModalContainer">
-            
-            <!-- Modal Header -->
-            <div class="p-4 border-b border-white/10 flex items-center justify-between bg-brand-card/50">
-                <div class="flex items-center space-x-2">
-                    <i class="fa-solid fa-book-open text-brand-pink text-xl"></i>
-                    <h3 class="text-lg font-semibold font-kanit text-white">เมนูแนะนำ & เครื่องดื่ม</h3>
-                </div>
-                <button onclick="closeMenuModal()" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-gray-300 hover:bg-white/20 active:scale-90 transition-all">
-                    <i class="fa-solid fa-xmark text-lg"></i>
-                </button>
-            </div>
-
-            <!-- Category Tabs -->
-            <div class="flex border-b border-white/10 px-4 py-2 space-x-2 overflow-x-auto custom-scrollbar bg-black/30">
-                <button onclick="switchCategory('all')" id="tab-all" class="menu-tab px-4 py-1.5 rounded-full text-xs font-medium bg-brand-pink text-white whitespace-nowrap">ทั้งหมด</button>
-                <button onclick="switchCategory('signature')" id="tab-signature" class="menu-tab px-4 py-1.5 rounded-full text-xs font-medium bg-white/5 text-gray-300 hover:bg-white/10 whitespace-nowrap">เมนูแนะนำ Signature</button>
-                <button onclick="switchCategory('food')" id="tab-food" class="menu-tab px-4 py-1.5 rounded-full text-xs font-medium bg-white/5 text-gray-300 hover:bg-white/10 whitespace-nowrap">อาหารทานเล่น</button>
-                <button onclick="switchCategory('drink')" id="tab-drink" class="menu-tab px-4 py-1.5 rounded-full text-xs font-medium bg-white/5 text-gray-300 hover:bg-white/10 whitespace-nowrap">เครื่องดื่ม</button>
-            </div>
-
-            <!-- Menu List Content -->
-            <div class="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar" id="menuItemsList">
-                
-                <!-- Item 1 -->
-                <div class="menu-item signature flex items-center space-x-3 glass-card p-3 rounded-xl border border-white/5">
-                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=200&q=80" alt="ข้อไก่ทอดซอสเกาหลี" class="w-20 h-20 rounded-lg object-cover">
-                    <div class="flex-1">
-                        <div class="flex justify-between items-start">
-                            <h4 class="font-medium text-sm text-white">ข้อไก่ทอดซอสซิกเนเจอร์</h4>
-                            <span class="text-brand-pink font-semibold text-sm">159.-</span>
-                        </div>
-                        <p class="text-[11px] text-gray-400 mt-1 line-clamp-2">ข้อไก่กรอบกรุบ คลุกซอสเผ็ดหวานสูตรพิเศษของร้าน Close Friends</p>
-                        <button onclick="openNotificationToast('เพิ่ม ข้อไก่ทอดซอสซิกเนเจอร์ ลงรายการเรียบร้อย')" class="mt-2 text-[10px] bg-brand-pink/20 hover:bg-brand-pink border border-brand-pink/50 text-brand-pink hover:text-white px-2.5 py-1 rounded-md transition-colors">
-                            + สั่งเมนูนี้
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="menu-item food flex items-center space-x-3 glass-card p-3 rounded-xl border border-white/5">
-                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=200&q=80" alt="พิซซ่าเตาถ่าน" class="w-20 h-20 rounded-lg object-cover">
-                    <div class="flex-1">
-                        <div class="flex justify-between items-start">
-                            <h4 class="font-medium text-sm text-white">พิซซ่าฮาวายเอี้ยนโฮมเมด</h4>
-                            <span class="text-brand-pink font-semibold text-sm">289.-</span>
-                        </div>
-                        <p class="text-[11px] text-gray-400 mt-1 line-clamp-2">แป้งบางกรอบ อบสดใหม่ ชีสยืดสะใจ เครื่องแน่นเต็มคำ</p>
-                        <button onclick="openNotificationToast('เพิ่ม พิซซ่าฮาวายเอี้ยน ลงรายการเรียบร้อย')" class="mt-2 text-[10px] bg-brand-pink/20 hover:bg-brand-pink border border-brand-pink/50 text-brand-pink hover:text-white px-2.5 py-1 rounded-md transition-colors">
-                            + สั่งเมนูนี้
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="menu-item drink signature flex items-center space-x-3 glass-card p-3 rounded-xl border border-white/5">
-                    <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=200&q=80" alt="Close Friends Cocktail" class="w-20 h-20 rounded-lg object-cover">
-                    <div class="flex-1">
-                        <div class="flex justify-between items-start">
-                            <h4 class="font-medium text-sm text-white">Close Friends Neon Night</h4>
-                            <span class="text-brand-cyan font-semibold text-sm">220.-</span>
-                        </div>
-                        <p class="text-[11px] text-gray-400 mt-1 line-clamp-2">ค็อกเทลซิกเนเจอร์สีเรืองแสง รสเปรี้ยวอมหวาน หอมกลิ่นเบอร์รี่สดชื่น</p>
-                        <button onclick="openNotificationToast('เพิ่ม Close Friends Neon Night ลงรายการเรียบร้อย')" class="mt-2 text-[10px] bg-brand-cyan/20 hover:bg-brand-cyan border border-brand-cyan/50 text-brand-cyan hover:text-slate-900 px-2.5 py-1 rounded-md font-medium transition-colors">
-                            + สั่งเมนูนี้
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Item 4 -->
-                <div class="menu-item drink flex items-center space-x-3 glass-card p-3 rounded-xl border border-white/5">
-                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=200&q=80" alt="Mocktail Craft" class="w-20 h-20 rounded-lg object-cover">
-                    <div class="flex-1">
-                        <div class="flex justify-between items-start">
-                            <h4 class="font-medium text-sm text-white">Berry Bliss (Mocktail)</h4>
-                            <span class="text-brand-cyan font-semibold text-sm">120.-</span>
-                        </div>
-                        <p class="text-[11px] text-gray-400 mt-1 line-clamp-2">ม็อกเทลไร้แอลกอฮอล์ ดื่มง่าย เหมาะสำหรับสายสุขภาพหรือคนขับรถ</p>
-                        <button onclick="openNotificationToast('เพิ่ม Berry Bliss ลงรายการเรียบร้อย')" class="mt-2 text-[10px] bg-brand-cyan/20 hover:bg-brand-cyan border border-brand-cyan/50 text-brand-cyan hover:text-slate-900 px-2.5 py-1 rounded-md font-medium transition-colors">
-                            + สั่งเมนูนี้
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Modal Footer Button -->
-            <div class="p-4 border-t border-white/10 bg-brand-card/80">
-                <button onclick="closeMenuModal(); openNotificationToast('รายการถูกส่งไปยังห้องครัวเรียบร้อยแล้ว');" class="w-full py-3 bg-gradient-to-r from-brand-pink to-brand-purple rounded-xl font-medium text-sm text-white shadow-lg active:scale-95 transition-all">
-                    ดูสรุปรายการที่เลือก
-                </button>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- MODAL 2: Upload Photo to Screen & Request Song -->
-    <div id="uploadModal" class="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 p-0 sm:p-4">
-        <div class="w-full max-w-lg bg-brand-dark/95 border border-white/10 rounded-t-3xl sm:rounded-3xl max-h-[90vh] flex flex-col overflow-hidden shadow-2xl transform translate-y-full transition-transform duration-300" id="uploadModalContainer">
-            
-            <!-- Modal Header -->
-            <div class="p-4 border-b border-white/10 flex items-center justify-between bg-brand-card/50">
-                <div class="flex items-center space-x-2">
-                    <i class="fa-solid fa-desktop text-brand-cyan text-xl"></i>
-                    <h3 class="text-lg font-semibold font-kanit text-white">ส่งรูปขึ้นจอ & ขอเพลง</h3>
-                </div>
-                <button onclick="closeUploadModal()" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-gray-300 hover:bg-white/20 active:scale-90 transition-all">
-                    <i class="fa-solid fa-xmark text-lg"></i>
-                </button>
-            </div>
-
-            <!-- Modal Body -->
-            <div class="p-5 overflow-y-auto space-y-5 custom-scrollbar">
-
-                <!-- Image Picker Area -->
-                <div>
-                    <label class="block text-xs font-medium text-gray-300 mb-2">1. เลือกรูปภาพเพื่อขึ้นจอร้าน</label>
-                    <div id="imageDropZone" class="relative border-2 border-dashed border-brand-cyan/40 hover:border-brand-cyan rounded-2xl p-4 text-center glass-card transition-all cursor-pointer">
-                        <input type="file" id="photoInput" accept="image/*" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full z-10" onchange="previewImage(event)">
-                        
-                        <div id="uploadPlaceholder" class="py-4 flex flex-col items-center">
-                            <div class="w-12 h-12 rounded-full bg-brand-cyan/10 flex items-center justify-center text-brand-cyan mb-2">
-                                <i class="fa-solid fa-cloud-arrow-up text-xl"></i>
-                            </div>
-                            <p class="text-xs font-medium text-white">แตะเพื่อเลือกรูปถ่ายของคุณ</p>
-                            <p class="text-[10px] text-gray-400 mt-1">รองรับ JPG, PNG (ไม่เกิน 10MB)</p>
-                        </div>
-
-                        <!-- Preview Container -->
-                        <div id="imagePreviewContainer" class="hidden relative rounded-xl overflow-hidden max-h-48">
-                            <img id="imagePreview" src="#" alt="Preview" class="w-full h-48 object-cover rounded-xl">
-                            <button type="button" onclick="clearImagePreview(event)" class="absolute top-2 right-2 z-20 w-7 h-7 rounded-full bg-black/70 text-white flex items-center justify-center text-xs">
-                                <i class="fa-solid fa-trash"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Message on Screen -->
-                <div>
-                    <label for="screenCaption" class="block text-xs font-medium text-gray-300 mb-2">2. ข้อความฝากถึงทุกคนบนจอ (Optional)</label>
-                    <input type="text" id="screenCaption" placeholder="เช่น HBD คุณบอย โต๊ะ 08 แฮปปี้มากๆ ครับ!" class="w-full glass-card border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-cyan transition-colors">
-                </div>
-
-                <!-- Song Request Field -->
-                <div>
-                    <label for="songName" class="block text-xs font-medium text-gray-300 mb-2">3. ขอเพลงโปรดกับนักดนตรี</label>
-                    <div class="relative">
-                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
-                            <i class="fa-solid fa-music text-xs"></i>
-                        </span>
-                        <input type="text" id="songName" placeholder="ระบุชื่อเพลง / ชื่อศิลปิน" class="w-full glass-card border border-white/10 rounded-xl pl-9 pr-3.5 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-cyan transition-colors">
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Modal Footer Button -->
-            <div class="p-4 border-t border-white/10 bg-brand-card/80">
-                <button onclick="submitUploadModal()" class="w-full py-3 bg-gradient-to-r from-brand-cyan via-teal-500 to-emerald-500 rounded-xl font-medium text-sm text-slate-950 shadow-lg shadow-brand-cyan/20 active:scale-95 transition-all">
-                    ส่งขึ้นจอ & ขอเพลงทันที
-                </button>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Toast Notification Container -->
-    <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 transition-all duration-300 w-11/12 max-w-sm">
-        <div class="glass-card border border-brand-cyan/50 rounded-2xl p-3.5 shadow-2xl flex items-center space-x-3 bg-brand-dark/95">
-            <div id="toastIcon" class="w-8 h-8 rounded-full bg-brand-cyan/20 text-brand-cyan flex items-center justify-center shrink-0">
-                <i class="fa-solid fa-circle-check text-sm"></i>
-            </div>
-            <p id="toastMessage" class="text-xs text-white font-medium flex-1">ข้อความแจ้งเตือน</p>
-        </div>
-    </div>
-
-    <script>
-        // --- Modal Control Functions ---
-        function openMenuModal() {
-            const modal = document.getElementById('menuModal');
-            const container = document.getElementById('menuModalContainer');
-            modal.classList.remove('opacity-0', 'pointer-events-none');
-            setTimeout(() => {
-                container.classList.remove('translate-y-full');
-            }, 10);
-        }
-
-        function closeMenuModal() {
-            const modal = document.getElementById('menuModal');
-            const container = document.getElementById('menuModalContainer');
-            container.classList.add('translate-y-full');
-            setTimeout(() => {
-                modal.classList.add('opacity-0', 'pointer-events-none');
-            }, 300);
-        }
-
-        function openUploadModal() {
-            const modal = document.getElementById('uploadModal');
-            const container = document.getElementById('uploadModalContainer');
-            modal.classList.remove('opacity-0', 'pointer-events-none');
-            setTimeout(() => {
-                container.classList.remove('translate-y-full');
-            }, 10);
-        }
-
-        function closeUploadModal() {
-            const modal = document.getElementById('uploadModal');
-            const container = document.getElementById('uploadModalContainer');
-            container.classList.add('translate-y-full');
-            setTimeout(() => {
-                modal.classList.add('opacity-0', 'pointer-events-none');
-            }, 300);
-        }
-
-        // --- Menu Category Filtering ---
-        function switchCategory(cat) {
-            // Tab highlight
-            const tabs = document.querySelectorAll('.menu-tab');
-            tabs.forEach(tab => {
-                tab.classList.remove('bg-brand-pink', 'text-white');
-                tab.classList.add('bg-white/5', 'text-gray-300');
-            });
-
-            const activeTab = document.getElementById('tab-' + cat);
-            if (activeTab) {
-                activeTab.classList.remove('bg-white/5', 'text-gray-300');
-                activeTab.classList.add('bg-brand-pink', 'text-white');
-            }
-
-            // Filter items
-            const items = document.querySelectorAll('.menu-item');
-            items.forEach(item => {
-                if (cat === 'all') {
-                    item.style.display = 'flex';
-                } else if (item.classList.contains(cat)) {
-                    item.style.display = 'flex';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }
-
-        // --- Image Preview Logic ---
-        function previewImage(event) {
-            const input = event.target;
-            if (input.files && input.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    document.getElementById('imagePreview').src = e.target.result;
-                    document.getElementById('uploadPlaceholder').classList.add('hidden');
-                    document.getElementById('imagePreviewContainer').classList.remove('hidden');
-                }
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-
-        function clearImagePreview(e) {
-            e.stopPropagation();
-            document.getElementById('photoInput').value = '';
-            document.getElementById('uploadPlaceholder').classList.remove('hidden');
-            document.getElementById('imagePreviewContainer').classList.add('hidden');
-        }
-
-        function submitUploadModal() {
-            const songInput = document.getElementById('songName').value;
-            const captionInput = document.getElementById('screenCaption').value;
-            const photoInput = document.getElementById('photoInput');
-
-            if (!photoInput.files.length && !songInput.trim() && !captionInput.trim()) {
-                openNotificationToast('กรุณาเลือกรูปภาพ หรือระบุเพลง/ข้อความที่ต้องการส่ง');
-                return;
-            }
-
-            closeUploadModal();
-            openNotificationToast('ส่งข้อมูลเรียบร้อยแล้ว! รูปภาพและเพลงจะขึ้นจอเร็วๆ นี้');
-
-            // Reset inputs
-            setTimeout(() => {
-                document.getElementById('songName').value = '';
-                document.getElementById('screenCaption').value = '';
-                clearImagePreview(new Event('click'));
-            }, 500);
-        }
-
-        // --- Wi-Fi Copy Functionality ---
-        function copyWifi() {
-            const wifiName = "CloseFriends_5G";
-            
-            // Fallback clipboard logic
-            const tempInput = document.createElement("input");
-            tempInput.value = wifiName;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand("copy");
-            document.body.removeChild(tempInput);
-
-            openNotificationToast("คัดลอกชื่อ Wi-Fi: " + wifiName + " แล้ว");
-        }
-
-        // --- Toast Notification Handler ---
-        let toastTimeout;
-        function openNotificationToast(message) {
-            const toast = document.getElementById('toast');
-            const toastMsg = document.getElementById('toastMessage');
-
-            toastMsg.innerText = message;
-            toast.classList.remove('opacity-0', 'pointer-events-none');
-            toast.classList.add('opacity-100');
-
-            clearTimeout(toastTimeout);
-            toastTimeout = setTimeout(() => {
-                toast.classList.remove('opacity-100');
-                toast.classList.add('opacity-0', 'pointer-events-none');
-            }, 3000);
-        }
-    </script>
 </body>
 </html>
