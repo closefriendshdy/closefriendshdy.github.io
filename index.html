@@ -119,6 +119,47 @@
         .neon-text-pink {
             text-shadow: 0 0 10px rgba(255,0,122,0.6), 0 0 20px rgba(255,0,122,0.3);
         }
+
+        /* Container สำหรับครอบรูปโลโก้ เพื่อจัดตำแหน่งและทำแสงเรืองแสง (Glow) */
+        .logo-container {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 1.2rem auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* ตกแต่งตัวรูปภาพโลโก้ */
+        .brand-logo-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* ป้องกันไม่ให้รูปโลโก้เบี้ยวหรือเสียสัดส่วน */
+            border-radius: 50%; /* สั่งให้เป็นทรงกลม (หากโลโก้เป็นสี่เหลี่ยมสามารถตัดออกได้) */
+            
+            /* เอฟเฟกต์เส้นขอบและเงาเรืองแสง Neon */
+            border: 2px solid rgba(255, 0, 122, 0.6);
+            box-shadow: 0 0 20px rgba(255, 0, 122, 0.4),
+                        0 0 40px rgba(0, 240, 255, 0.2);
+            
+            /* Animation ไฟนุ่มนวลหมุนเวียน */
+            animation: logoGlow 4s infinite alternate ease-in-out;
+        }
+        
+        /* เอฟเฟกต์ไฟเรืองแสงเคลื่อนไหวเบาๆ */
+        @keyframes logoGlow {
+            0% {
+                box-shadow: 0 0 15px rgba(255, 0, 122, 0.4),
+                            0 0 30px rgba(0, 240, 255, 0.2);
+                transform: scale(1);
+            }
+            100% {
+                box-shadow: 0 0 25px rgba(255, 0, 122, 0.7),
+                            0 0 50px rgba(0, 240, 255, 0.4);
+                transform: scale(1.03);
+            }
+}
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between items-center px-4 py-8 relative overflow-x-hidden selection:bg-brand-pink selection:text-white">
@@ -137,10 +178,14 @@
             <!-- Table / Customer Info Badge -->
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-card border border-brand-pink/30 mb-5 animate-float">
                 <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
-                <span class="text-xs font-light text-gray-300">ยินดีต้อนรับ • <span class="font-medium text-white">โต๊ะ 08</span></span>
+                <span class="text-xs font-light text-gray-300">ยินดีต้อนรับ<span class="font-medium text-white"></span></span>
             </div>
 
             <!-- Brand Logo Frame -->
+            <div class="logo-container">
+                <img src="cf_logo_black.jpg" alt="Close Friends Hat Yai" class="brand-logo-img">
+            </div>
+            <!--
             <div class="relative mb-4 group">
                 <div class="absolute -inset-1 bg-gradient-to-r from-brand-pink via-brand-purple to-brand-cyan rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse-glow"></div>
                 <div class="relative w-28 h-28 rounded-full glass-card flex items-center justify-center p-1 border-2 border-white/20">
@@ -151,7 +196,9 @@
                     </div>
                 </div>
             </div>
-
+            -->
+            
+    
             <!-- Restaurant Name -->
             <h1 class="text-3xl font-extrabold tracking-wider font-kanit text-white neon-text-pink">
                 CLOSE FRIENDS
@@ -164,7 +211,7 @@
         <main class="w-full space-y-5">
 
             <!-- Link 1: Food & Beverage Menu External Link -->
-            <a href="https://example.com/menu" target="_blank" rel="noopener noreferrer" class="block w-full group relative overflow-hidden rounded-2xl glass-card border border-brand-pink/40 p-5 transition-all duration-300 active:scale-95 hover:border-brand-pink focus:outline-none shadow-lg shadow-brand-pink/10">
+            <a href="https://drive.google.com/file/d/1M1D0Cah4WfLPBobnlGUWMAT10n0B-9mh/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="block w-full group relative overflow-hidden rounded-2xl glass-card border border-brand-pink/40 p-5 transition-all duration-300 active:scale-95 hover:border-brand-pink focus:outline-none shadow-lg shadow-brand-pink/10">
                 <div class="absolute inset-0 bg-gradient-to-r from-brand-pink/20 via-transparent to-transparent opacity-60 group-hover:opacity-100 transition-opacity"></div>
                 
                 <div class="relative flex items-center justify-between z-10">
@@ -176,10 +223,10 @@
                         <!-- Text Content -->
                         <div class="text-left">
                             <span class="block text-lg font-semibold font-kanit text-white group-hover:text-brand-pink transition-colors">
-                                เมนูอาหาร & เครื่องดื่ม
+                                โปรโมชั่น เมนูอาหาร & เครื่องดื่ม
                             </span>
                             <span class="block text-xs text-gray-400 font-light mt-0.5">
-                                คลิกเพื่อเปิดดูเมนูรายการอาหาร
+                                คลิกเพื่อเปิดเมนูรายการอาหาร
                             </span>
                         </div>
                     </div>
@@ -204,7 +251,7 @@
                         <div class="text-left">
                             <div class="flex items-center gap-1.5">
                                 <span class="text-lg font-semibold font-kanit text-white group-hover:text-brand-cyan transition-colors">
-                                    ส่งรูปขึ้นจอ / ขอเพลง
+                                    แจกว๊าปปป ส่งรูปขึ้นจอ 
                                 </span>
                                 <span class="flex h-2 w-2 relative">
                                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-cyan opacity-75"></span>
@@ -212,7 +259,7 @@
                                 </span>
                             </div>
                             <span class="block text-xs text-gray-400 font-light mt-0.5">
-                                แชร์รูปภาพของคุณขึ้นจอใหญ่ในร้าน
+                                แชร์รูปภาพของคุณขึ้นจอใหญ่ทั้ง 3 จอภายในร้าน
                             </span>
                         </div>
                     </div>
@@ -227,27 +274,27 @@
 
         <!-- Footer / Social Media Links -->
         <footer class="w-full pt-6 pb-2 text-center space-y-4">
-            <p class="text-xs text-gray-400 font-light">ติดตามข่าวสาร & โปรโมชั่น</p>
+            <p class="text-xs text-gray-400 font-light">จองโต๊ะล่วงหน้า/ติดตาม/โปรโมชั่น</p>
             
             <div class="flex items-center justify-center space-x-6">
                 <!-- Line Official Link -->
-                <a href="https://line.me/R/ti/p/@closefriends" target="_blank" rel="noopener noreferrer" aria-label="LINE Official Account" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-emerald-400 hover:bg-emerald-500 hover:text-white transition-all transform hover:scale-110 active:scale-95 shadow-md">
+                <a href="https://line.me/R/ti/p/@closefriendshdy" target="_blank" rel="noopener noreferrer" aria-label="LINE Official Account" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-emerald-400 hover:bg-emerald-500 hover:text-white transition-all transform hover:scale-110 active:scale-95 shadow-md">
                     <i class="fa-brands fa-line text-2xl"></i>
                 </a>
                 
                 <!-- Facebook Page Link -->
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook Page" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-blue-400 hover:bg-blue-600 hover:text-white transition-all transform hover:scale-110 active:scale-95 shadow-md">
+                <a href="https://www.facebook.com/profile.php?id=100094153521942" target="_blank" rel="noopener noreferrer" aria-label="Facebook Page" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-blue-400 hover:bg-blue-600 hover:text-white transition-all transform hover:scale-110 active:scale-95 shadow-md">
                     <i class="fa-brands fa-facebook-f text-xl"></i>
                 </a>
                 
                 <!-- Instagram Link -->
-                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-pink-400 hover:bg-gradient-to-tr hover:from-amber-500 hover:via-pink-500 hover:to-purple-600 hover:text-white transition-all transform hover:scale-110 active:scale-95 shadow-md">
+                <a href="https://www.instagram.com/closefriends.hdy" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-pink-400 hover:bg-gradient-to-tr hover:from-amber-500 hover:via-pink-500 hover:to-purple-600 hover:text-white transition-all transform hover:scale-110 active:scale-95 shadow-md">
                     <i class="fa-brands fa-instagram text-2xl"></i>
                 </a>
             </div>
 
             <p class="text-[11px] text-gray-500 font-light pt-2">
-                © 2026 Close Friends Bar & Bistro. All rights reserved.
+                © 2026. All rights reserved.
             </p>
         </footer>
 
